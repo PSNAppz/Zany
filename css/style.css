@@ -1,0 +1,53 @@
+@font-face {
+    font-family: candy;
+    src: url(../fonts/candy.ttf);
+}
+@font-face {
+  font-family: bubbly;
+  src: url(../fonts/bubbly.ttf);
+}
+#loginhead{
+  text-align:center;
+  font-style: oblique;
+  font-family:candy;
+  font-size: 100px;
+  color:#001337;
+  opacity: 0.95;
+
+}
+footer{
+  font-size: 3px;
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  color:white;
+  width:100%;
+  background:red;
+  height:30px;
+}
+footer p{
+  font-family:bubbly;
+  color:#001337;
+  font-size: 10px;
+  padding-top: 10px;
+}
+#jumbro{
+  color:#001337;
+}
+
+body{
+  opacity: 0.9;
+  background-image: url("../images/bg.png");
+  //background: linear-gradient(0deg, #EB3349 10%, #F45C43 90%);
+  background-attachment: fixed;
+  height:840px;
+  font-family:bubbly;
+}
+#error{
+  border:solid blue;
+  background-color: green;
+  border-radius: 10px;
+  color:white;
+  font-size:10px;
+  font-family: bubbly;
+}
