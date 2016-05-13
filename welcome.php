@@ -78,12 +78,7 @@ while($rows=mysqli_fetch_array($result,MYSQLI_NUM))
    elseif(($rows[0]==1 && $_SESSION['login_user']=='PSN')|| ($rows[0]==2 && $_SESSION['login_user']=='EnVictO')){
      echo "<div class='Feeds'><span class='whoposted'>
      ".$nme." posted an update on <span style='color:yellow;'>"
-     .$date."</span> <span class='glyphicon glyphicon-bullhorn'></span>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     .$date."</span> <span class='glyphicon glyphicon-bullhorn' id='test'></span>
      ".$label."
      </span><br><h3>".$post."</h3><br><span style='width:10px;height:10px;' class='glyphicon glyphicon-remove' >
      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

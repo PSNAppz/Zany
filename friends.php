@@ -30,6 +30,7 @@ $resul=mysqli_query($con,$sql2);
 <h2>You have <?php echo $friends; ?> Friend(s)</h2>
 </div>
 <br>
+<br>
 <?php
 while($res1=mysqli_fetch_array($res,MYSQLI_NUM)){
 $id2=$res1[0];

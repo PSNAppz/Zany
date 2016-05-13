@@ -16,6 +16,8 @@ include('includes/mysql_connection.php');
                   $row=mysqli_fetch_assoc($res);
                   if($row["password"]==$pass){
                    $_SESSION['login_user']=$user;
+                   $sql="update mysql.registration_zany set Online='1' where username='".$user."'";
+                   $res=mysqli_query($con,$sql);
                    $msg= $_SESSION['login_user'];
                    header("Location: welcome.php");
                    exit();
@@ -41,7 +43,7 @@ include('includes/mysql_connection.php');
        elseif($_POST['action']=="register"){
          $user=secure_input($_POST['uname']);
          $fname=secure_input($_POST['fname']);
-	 $pass1=secure_input($_POST['pass1']);
+	       $pass1=secure_input($_POST['pass1']);
          $pass=secure_input($_POST['rpassword']);
          $email=secure_input($_POST['remail']);
          $sql="select count(*) from mysql.registration_zany where username='".$user."'";
@@ -84,6 +86,7 @@ Succesfully Registered!</div>";
 ob_flush(); ?>
 
 <!DOCTYPE HTML>
+
 <html>
 <head><title>ZanY&trade; Welcome</title>
   <!-- Latest compiled and minified CSS -->
@@ -165,7 +168,7 @@ function checkAvailability() {
           <div class="form-group">
             <label class="control-label col-sm-2" for="fname">Full Name:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter Full Name">
+              <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter Full Name" pattern=".{3,}"   required title="3 characters minimum">
             </div>
           </div>
           <div class="form-group">
@@ -189,7 +192,7 @@ function checkAvailability() {
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-               <input name="action" type="hidden" value="register" >
+               <input name="action" type="hidden" value="register">
 
             </div>
             <input type="submit" name="registration-btn" value="Register" class="btn btn-default">
