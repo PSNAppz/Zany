@@ -11,7 +11,3 @@ Top Contributors
 1. @PSNAppZ
 2. @EnVict0
 3. @Sooraj
-
-Extras
-----------
-Travis CI Integration
